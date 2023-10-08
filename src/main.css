@@ -1,12 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Roboto", sans-serif;
+  max-width: 1440px;
+  margin: auto;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
 
-body{
-    font-family: 'Roboto', sans-serif;
-    max-width: 1440px;
-    margin: auto;
+header {
+  background-color: inherit;
+  background-image: url("../src/assets/header-img-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:#00000080;
+  z-index: 1;
+}
+#NavLink > li {
+  font-weight: 500;
+  cursor: pointer;
+}
+#NavLink > li > .active {
+  border-color: #FFF;
+  border-bottom-width: 2px;
+}
+
+.socialIcons > div {
+  border: 1px solid #adadad;
+  padding: 10px;
+  cursor: pointer;
+}
+.socialIcons > div:hover {
+  background-color: #0866ff;
+  color: #ffff;
+  transition: all 1s;
+  border-radius: 5px;
+}
+
+.socialIcons > div > .fa-brands {
+  font-size: 1.2rem;
+}
+#quickUl > li :hover {
+  border-color: #FFF;
+  border-bottom-width: 2px;
+}
+
+#serviceUl > li:hover {
+  border-color: #FFF;
+  border-bottom-width: 1px;
+  cursor: pointer;
+}
+
+
+.work {
+  position: relative;
+  cursor: pointer;
+}
+
+.OnHoverOverly{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:#00000080;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.8s;
+
+}
+.work:hover .OnHoverOverly{
+  opacity: 1;
 }

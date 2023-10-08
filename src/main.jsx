@@ -9,6 +9,7 @@ import Purchase from './Components/Purchase.jsx'
 import Profile from './Components/Profile.jsx';
 import Login from './Components/Login.jsx';
 import Register from './Components/Register.jsx';
+import Details from './Components/Details.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 
@@ -20,7 +21,14 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home />
+        element: <Home />,
+        loader : ()=> fetch('/Events.json')
+      },
+      {
+        path : '/Home/:id',
+        element : <Details/>,
+        loader : ()=>fetch('/Events.json')
+
       },
       {
         path: '/About',

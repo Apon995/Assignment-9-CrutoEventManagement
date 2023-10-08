@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "eventName": "Full-Service Production",
+        "eventTitle": "A Night of Elegance and Entertainment",
+        "eventDetails": "Join us for the Glamorous Gala Extravaganza, a night of elegance and entertainment like no other. This full-service production event will feature dazzling performances, gourmet dining, and a luxurious ambiance that will leave you spellbound. From the moment you step into our opulent venue, you'll be immersed in a world of luxury and sophistication. Prepare to be dazzled by world-class artists and musicians, indulge in a sumptuous multi-course meal, and dance the night away in style. Tickets are limited, so secure your spot today!",
+        "eventPurchasePrice": 250,
+        "eventImage": "https://i.ibb.co/176L2Jf/full-time-services.jpg"
+    },
+    {
+        "id": 2,
+        "eventName": "Event Management",
+        "eventTitle": "Get Ready to Glow in the Dark!",
+        "eventDetails": "Experience the ultimate neon glow party managed by the best in the business! Our event management team is ready to make your night unforgettable. Neon lights, high-energy DJ sets, UV paint, and non-stop dancing await you. This is not your ordinary party; it's a neon explosion of fun. Tickets include access to the coolest glow-in-the-dark accessories and a complimentary drink. Join us for a night that will light up your life!",
+        "eventPurchasePrice": 330,
+        "eventImage": "https://i.ibb.co/xJVNPkL/event-management-image.jpg"
+    },
+    {
+        "id": 3,
+        "eventName": "wedding Events",
+        "eventTitle": "Celebrate Your Child's Special Day in Style",
+        "eventDetails": "Make your child's birthday unforgettable with our superhero-themed birthday event. Our team will transform your backyard into a superhero paradise, complete with themed decorations, games, and even a visit from your child's favorite superhero! The little heroes will enjoy an action-packed day filled with games, a superhero cake, and a treasure hunt. Don't miss this chance to create magical memories for your child's special day!",
+        "eventPurchasePrice": 220,
+        "eventImage": "https://i.ibb.co/fvPHYGS/wedding-img.webp"
+    },
+    {
+        "id": 4,
+        "eventName": "Birthday Events",
+        "eventTitle": "Say 'I Do' Surrounded by Nature's Beauty",
+        "eventDetails": "Plan your dream wedding in our enchanting garden venue. Exchange vows amidst lush greenery and blooming flowers. Our experienced wedding planners will ensure every detail is perfect, from the elegant floral arrangements to the exquisite dining experience. Capture your love story with a professional photography package included in the event price. Create lifelong memories in this picturesque setting.",
+        "eventPurchasePrice": 5000,
+        "eventImage": "https://i.ibb.co/56kJ9fc/Birthday-events.jpg"
+    },
+    {
+        "id": 5,
+        "eventName": "Live Entertainment",
+        "eventTitle": "25 Years of Love and Togetherness",
+        "eventDetails": "Celebrate your 25th wedding anniversary with a grand soiree that reflects the love and commitment that has endured for a quarter-century. Our event will feature a romantic candlelit dinner, live music, and a touching renewal of vows ceremony. It's a night to cherish your journey together and create new memories for the future. Join us for this unforgettable evening!",
+        "eventPurchasePrice": 3300,
+        "eventImage": "https://i.ibb.co/hgVnH0s/live-event-management.jpg"
+    },
+    {
+        "id": 6,
+        "eventName": "Picnic Events",
+        "eventTitle": "Join Us in Making a Difference",
+        "eventDetails": "Get ready for an evening of elegance and philanthropy at our Charity Fundraising Gala. This exclusive event is dedicated to raising funds for a noble cause. We are proud to support a local charity that helps underprivileged children access education and healthcare. The gala will feature celebrity guest speakers, live performances by renowned artists, a gourmet dinner, and a silent auction with incredible prizes. Your ticket not only grants you access to an unforgettable evening but also contributes to a brighter future for those in need. Let's make a difference together!",
+        "eventPurchasePrice": 1540,
+        "eventImage": "https://i.ibb.co/7XCkDHc/picnic-events.jpg"
+    }
+]
