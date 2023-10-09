@@ -19,11 +19,11 @@ function Home() {
 
 
   return (
-    <div className='md:block hidden'>
+    <div className=''>
       <section className='px-[5%] '>
         {/* --who-we-are-section-- */}
-        <div className='flex gap-5'>
-          <div className='w-[50%]'>
+        <div className='flex md:flex-row flex-col-reverse gap-5'>
+          <div className='md:w-[50%] w-full'>
             <h1 className='text-base font-medium text-red-500'>Who we are ?</h1>
 
             <div className='py-5 space-y-4'>
@@ -33,11 +33,11 @@ function Home() {
             </div>
 
             <div className='flex '>
-              <div style={{ transition: 'background 1s' }} className='hover:shadow-lg  hover:cursor-pointer  border-[2px] flex items-center justify-center flex-col px-8 py-3 bg-[#1a1a1a14] text-xl text-[#54595F] font-medium'>
+              <div style={{ transition: 'background 1s' }} className='hover:shadow-lg  hover:cursor-pointer  border-[2px] flex items-center justify-center flex-col md:px-8 px-4  py-3 bg-[#1a1a1a14] text-xl text-[#54595F] font-medium'>
                 <h1>2023 </h1>
                 <p>Established</p>
               </div>
-              <div style={{ transition: 'background 1s' }} className='hover:shadow-lg hover:cursor-pointer  border-[2px] flex items-center justify-center flex-col px-8 py-3 bg-[#1a1a1a14] text-xl text-[#54595F] font-medium'>
+              <div style={{ transition: 'background 1s' }} className='hover:shadow-lg hover:cursor-pointer  border-[2px] flex items-center justify-center flex-col md:px-8 px-4 py-3 bg-[#1a1a1a14] text-xl text-[#54595F] font-medium'>
                 <h1> 100+ </h1>
                 <p>Employe</p>
 
@@ -46,7 +46,7 @@ function Home() {
             </div>
 
           </div>
-          <div className='w-[50%]'>
+          <div className='md:w-[50%] w-full'>
             <img src={teamImg} alt="" />
 
           </div>
@@ -177,11 +177,11 @@ function Home() {
           <br />
           <br />
           
-          <div className='grid  md:grid-cols-2 grid-cols-1 '>
+          <div className='grid  lg:grid-cols-2 md:grid-cols-1 grid-cols-1 lg:gap-0 md:gap-5 '>
             {/* ---client-one-- */}
-            <div className='flex border-[1px] cursor-pointer hover:shadow-lg hover:bg-white rounded-md '>
+            <div className='flex md:flex-row flex-col border-[1px] cursor-pointer hover:shadow-lg hover:bg-white rounded-md '>
               <div className='w-full my-auto'>
-                <img src={JankarMahbub} alt=".." className='w-full h-[150px] my-auto' />
+                <img src={JankarMahbub} alt=".." className='md:w-full w-fit mx-auto h-[150px] my-auto' />
               </div>
               <div className='py-2 px-2 space-y-3'>
                 <h1 className='text-base font-normal text-[#54595F]'>
@@ -192,9 +192,9 @@ function Home() {
 
             </div>
             {/* ---client-two-- */}
-            <div className='flex border-[1px] cursor-pointer hover:shadow-lg hover:bg-white rounded-md py-1'>
+            <div className='flex md:flex-row flex-col border-[1px] cursor-pointer hover:shadow-lg hover:bg-white rounded-md py-1'>
               <div className='w-full my-auto'>
-                <img src={sumitSaha} alt=".." className='w-full h-[150px] my-auto' />
+                <img src={sumitSaha} alt=".." className='md:w-full w-fit mx-auto h-[150px] my-auto' />
               </div>
               <div className='py-2 px-2 space-y-3'>
                 <h1 className='text-base font-normal text-[#54595F]'>
@@ -205,9 +205,9 @@ function Home() {
 
             </div>
             {/* ---client-three-- */}
-            <div className='flex border-[1px] cursor-pointer hover:shadow-lg hover:bg-white rounded-md py-1'>
+            <div className='flex md:flex-row flex-col border-[1px] cursor-pointer hover:shadow-lg hover:bg-white rounded-md py-1'>
               <div className='w-full my-auto'>
-                <img src={Ayman} alt=".." className='w-full h-[150px] my-auto' />
+                <img src={Ayman} alt=".." className='md:w-full w-fit mx-auto h-[150px] my-auto' />
               </div>
               <div className='py-2 px-2 space-y-3'>
                 <h1 className='text-base font-normal text-[#54595F]'>
@@ -218,9 +218,9 @@ function Home() {
 
             </div>
             {/* ---client-four-- */}
-            <div className='flex border-[1px] cursor-pointer hover:shadow-lg hover:bg-white rounded-md py-1'>
+            <div className='flex md:flex-row flex-col border-[1px] cursor-pointer hover:shadow-lg hover:bg-white rounded-md py-1'>
               <div className='w-full my-auto'>
-                <img src={Farhan} alt=".." className='w-full h-[150px] my-auto' />
+                <img src={Farhan} alt=".." className='md:w-full w-fit mx-auto h-[150px] my-auto' />
               </div>
               <div className='py-2 px-2 space-y-3'>
                 <h1 className='text-base font-normal text-[#54595F]'>
@@ -242,13 +242,13 @@ function Home() {
       <br />
       <br />
       {/* ---makes-your-event-memorable-section-- */}
-      <div className="min-h-[500px] w-full" id='memorableSection'>
+      <div className="md:min-h-[500px] h-[300px] w-full" id='memorableSection'>
         <div className="text-center pt-9">
-          <h1 className='text-5xl font-bold text-[#FFFF]'>Let's Make Your <br /> Event Memorable!</h1>
+          <h1 className='md:text-5xl text-3xl font-bold text-[#FFFF]'>Let's Make Your <br /> Event Memorable!</h1>
 
-          <div className='mt-8 w-[35%] border-[1px] mx-auto h-[50px] rounded-md flex items-center '>
-            <input type="text" placeholder='Write your feedback here ' className='w-[80%] h-full px-2 outline-none border-none text-black text-base font-semibold ' />
-            <button className='w-[20%] h-full text-black text-xl hover:text-white font-medium cursor-pointer'>Send</button>
+          <div className='mt-8 xl:w-[35%] lg:w-[40%] md:w-[50%] w-[85%] border-[1px] mx-auto h-[50px] rounded-md flex items-center '>
+            <input type="text" placeholder='Write your feedback here ' className='w-[80%] h-full px-2 outline-none border-none text-black md:text-base text-sm font-semibold ' />
+            <button className='w-[20%] h-full text-black md:text-xl hover:text-white font-medium cursor-pointer  text-base'>Send</button>
           </div>
           <div className='mt-9'>
             <h1 className='text-2xl font-bold text-[#FFFF]'>Thank you for visit our site !</h1>

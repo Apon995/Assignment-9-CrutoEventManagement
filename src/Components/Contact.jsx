@@ -6,7 +6,7 @@ function Contact() {
       <div className='min-h-screen px-[5%] w-full'>
         <div>
           <div className='text-center space-y-2'>
-            <h1 className='text-4xl font-semibold text-[#000]'>Contact us Now !</h1>
+            <h1 className='md:text-4xl text-3xl font-semibold text-[#000]'>Contact us Now !</h1>
 
             <p className='text-base font-normal text-[#54595F]'>Asslamwaikum , welcome to cruto.com , this is a event management agency can we help you ? </p>
           </div>
@@ -35,7 +35,7 @@ function Contact() {
         <br />
         <br />
         
-        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-0 gap-4'>
           {/* ---location-box-- */}
           <div className='border-[1px] p-7 space-y-1 text-center cursor-pointer hover:shadow-lg hover:bg-white  socialIcons'>
             <div className='border-[2px] p-4 rounded-full w-fit mx-auto text-xl'>
@@ -71,6 +71,7 @@ function Contact() {
         </div>
 
       </div>
+      <br />
 
 
     </>

@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 function Footer() {
   return (
     <>
-      <div className='w-full px-[5%] bg-[#111111] text-[#FFF] py-9 footer md:block hidden' >
-        <div className=' flex items-center justify-between py-9'>
+      <div className='w-full px-[5%] bg-[#111111] text-[#FFF] py-9 footer md:text-start text-center ' >
+        <div className=' flex md:flex-row flex-col items-center justify-between py-9'>
           {/* --footer-1st-col-- */}
           <div>
             <h1 className='pb-4 font-semibold text-3xl'>Cruto</h1>
@@ -15,7 +15,7 @@ function Footer() {
                 in the city, we try to our best for customers.</p>
             </div>
 
-            <div className='flex items-center gap-4 pt-4 socialIcons'>
+            <div className='flex items-center gap-4 pt-4 socialIcons md:justify-start justify-center'>
               <div>
                 <i className="fa-brands fa-facebook"></i>
               </div>
@@ -31,7 +31,7 @@ function Footer() {
             </div>
           </div>
           {/* --footer-2nd-col-- */}
-          <div>
+          <div className='md:block hidden'>
             <h1 className='pb-4 font-semibold text-2xl'>Quick Links</h1>
             <div>
               <ul className=' text-sm font-medium space-y-1' id='quickUl'>
@@ -45,7 +45,7 @@ function Footer() {
           </div>
 
           {/* --foter-3rd-col-- */}
-          <div>
+          <div className='lg:block hidden'>
             <h1 className='pb-4 font-semibold text-2xl'>Our Services</h1>
 
             <ul className='text-sm font-medium space-y-1' id='serviceUl'>
@@ -59,7 +59,7 @@ function Footer() {
           </div>
 
           {/* --footer-4th-col-- */}
-          <div>
+          <div className='md:block hidden'>
             <h1 className='pb-4 font-semibold text-2xl'>Contact info </h1>
 
             <div>

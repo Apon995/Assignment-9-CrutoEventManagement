@@ -10,7 +10,7 @@ function App() {
   const Navigation = useNavigation();
 
 
-  const [bgimage, setbgimage] = useState("url('../src/assets/header-img-1.jpg')")
+  const [bgimage, setbgimage] = useState("url('https://i.ibb.co/mvw2ncg/header-img-1.jpg')")
   const [bgHeight, setBgheight] = useState('610px');
   const [bgPosition, setbgPositon] = useState('none');
 
@@ -41,7 +41,7 @@ function App() {
         document.getElementById('overlay').style.display = 'block';
         document.getElementById('headerTag').style.color = 'white'
         SetCurrentLocation(location.pathname.replace('/', ''))
-        setbgimage("url('../src/assets/header-img-1.jpg')")
+        setbgimage("url('https://i.ibb.co/mvw2ncg/header-img-1.jpg')")
         setBgheight('600px')
         setbgPositon('top left')
 
@@ -58,7 +58,7 @@ function App() {
         document.getElementById('overlay').style.display = 'block';
         document.getElementById('headerTag').style.color = 'white'
         SetCurrentLocation(location.pathname.replace('/', ''))
-        setbgimage("url('../src/assets/teamImg-1.jpg')")
+        setbgimage("url('https://i.ibb.co/F5j09zJ/team-Img-1.jpg')")
         setBgheight('350px')
         setbgPositon('bottom center')
 
@@ -73,7 +73,7 @@ function App() {
         document.getElementById('overlay').style.display = 'block';
         document.getElementById('headerTag').style.color = 'white'
         SetCurrentLocation(location.pathname.replace('/', ''))
-        setbgimage("url('../src/assets/contact-us.jpg')")
+        setbgimage("url('https://i.ibb.co/x27Sy32/contact-us.jpg')")
         setBgheight('350px')
         setbgPositon('center')
 
@@ -87,7 +87,7 @@ function App() {
         document.getElementById('overlay').style.display = 'block';
         document.getElementById('headerTag').style.color = 'white'
         SetCurrentLocation(location.pathname.replace('/', ''))
-        setbgimage("url('../src/assets/purchase-img.jpg')")
+        setbgimage("url('https://i.ibb.co/Lx3XMLg/purchase-img.jpg')")
         setBgheight('350px')
         setbgPositon('bottom center')
 
@@ -209,15 +209,15 @@ function App() {
         backgroundPosition: bgPosition,
         minHeight: bgHeight,
       }} >
-        <div className='overlay' id='overlay' style={{ minHeight: bgHeight }}></div>
+        <div className='overlay md:block hidden' id='overlay' style={{ minHeight: bgHeight }}></div>
         <Navbar CurrentLocation={CurrentLocation} />
         <br />
         {
           location?.pathname == '/' ?
-            <div className='relative z-10 px-[5%]'>
+            <div className='relative md:z-10 z-[5]  px-[5%]'>
 
-              <div className='md:w-[50%] space-y-6 float-right'>
-                <h1 className='md:text-5xl  text-3xl font-bold md:text-start text-center'>
+              <div className='lg:w-[50%] space-y-6 float-right lg:text-start text-center'>
+                <h1 className='xl:text-5xl md:text-4xl  text-3xl font-bold lg:text-start text-center'>
                   Bangladesh Best Event <br className='md:block hidden' />
                   Management Agency !
                 </h1>
@@ -227,7 +227,7 @@ function App() {
                 <button style={{ transition: 'background 1s' }} className='py-2 px-3 border-[1px] border-[#FFF] rounded-md hover:bg-[#FFF] hover:text-black font-medium'>Learn more</button>
 
               </div>
-            </div> : <div className='flex items-center justify-center relative z-10 '>
+            </div> : <div className='flex items-center justify-center relative md:z-10 z-[5] '>
               <h1 className='text-3xl font-bold'>{
 
                 CurrentLocation == 'Login' || CurrentLocation == 'Register' ? '' :
