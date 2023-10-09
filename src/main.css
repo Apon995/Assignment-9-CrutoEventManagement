@@ -41,6 +41,15 @@ body {
   transition: all 1s;
   border-radius: 5px;
 }
+.LoginIcons > div {
+  background-color: #0866ff;
+  color: #ffff;
+  padding: 10px;
+  font-size: 20px;
+  transition: all 1s;
+  border-radius: 10px;
+  cursor: pointer;
+}
 
 .socialIcons > div > .fa-brands {
   font-size: 1.2rem;

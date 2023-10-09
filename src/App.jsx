@@ -18,6 +18,23 @@ function App() {
 
 
 
+
+  useEffect(() => {
+    if (location.state == null) {
+      SetCurrentLocation(location.pathname.replace('/', ''))
+      document.getElementById('overlay').style.display = 'block';
+      document.getElementById('headerTag').style.color = 'white'
+      setbgimage("url('')")
+      setBgheight('350px')
+      setbgPositon('bottom center')
+
+    }
+    else{
+      return
+    }
+
+  }, [location.state])
+
   switch (location.pathname) {
     case '/':
       useEffect(() => {

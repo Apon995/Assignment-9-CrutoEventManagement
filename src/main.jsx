@@ -10,6 +10,8 @@ import Profile from './Components/Profile.jsx';
 import Login from './Components/Login.jsx';
 import Register from './Components/Register.jsx';
 import Details from './Components/Details.jsx'
+import Provider from './ContextHooks/Provider.jsx';
+import PrivateRoute from './Components/PrivateRoute.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 
@@ -27,7 +29,7 @@ const router = createBrowserRouter([
       {
 
         path: '/Home/:id',
-        element: <Details />,
+        element: <PrivateRoute><Details /></PrivateRoute>,
         loader: () => fetch('/Events.json')
 
 
@@ -64,6 +66,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider>
+      <RouterProvider router={router} />
+
+    </Provider>
   </React.StrictMode>,
 )
