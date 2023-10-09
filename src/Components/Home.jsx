@@ -56,6 +56,7 @@ function Home() {
         <br />
         <br />
         <br />
+        <br />
         {/* ---Features-works-- */}
         <div>
           <h1 className='text-base font-medium text-red-500'>Events we done</h1>
@@ -136,6 +137,7 @@ function Home() {
         <br />
         <br />
         <br />
+        <br />
         {/* ---our-services-section-- */}
         <div>
           <h1 className='text-base font-medium text-red-500 text-center'>Our services</h1>
@@ -161,6 +163,7 @@ function Home() {
         <br />
         <br />
         <br />
+        <br />
         {/* ---our-client-says-section-- */}
         <div>
           <h1 className='text-base font-medium text-red-500 text-center'>Our clients</h1>
@@ -173,6 +176,7 @@ function Home() {
 
           <br />
           <br />
+          
           <div className='grid  md:grid-cols-2 grid-cols-1 '>
             {/* ---client-one-- */}
             <div className='flex border-[1px] cursor-pointer hover:shadow-lg hover:bg-white rounded-md '>
@@ -233,6 +237,8 @@ function Home() {
 
         </div>
       </section>
+      <br />
+      <br />
       <br />
       <br />
       {/* ---makes-your-event-memorable-section-- */}

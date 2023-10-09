@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 function Card({event}) {
 
-    const {id , eventName , eventTitle, eventPurchasePrice , eventImage} = event || {};
+    const {id , eventName , eventTitle , eventImage} = event || {};
   return (
     <>
     <div className='border-[1px] shadow-sm bg-[#FFF] rounded-md'>

@@ -1,21 +1,29 @@
 import React, { useEffect, useState } from 'react';
-import { Outlet, useLocation } from 'react-router-dom'
-import "../src/main.css"
+import { Outlet, useLocation, useNavigation } from 'react-router-dom'
+import { Oval } from 'react-loader-spinner'
 import Navbar from './Components/Navbar.jsx';
-import Footer from './Components/Footer.jsx'
+import Footer from './Components/Footer.jsx';
+import "../src/main.css"
 
 function App() {
   const location = useLocation();
+  const Navigation = useNavigation();
+
 
   const [bgimage, setbgimage] = useState("url('../src/assets/header-img-1.jpg')")
   const [bgHeight, setBgheight] = useState('610px');
   const [bgPosition, setbgPositon] = useState('none');
+
+  const [CurrentLocation, SetCurrentLocation] = useState(null);
 
 
 
   switch (location.pathname) {
     case '/':
       useEffect(() => {
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('headerTag').style.color = 'white'
+        SetCurrentLocation(location.pathname.replace('/', ''))
         setbgimage("url('../src/assets/header-img-1.jpg')")
         setBgheight('600px')
         setbgPositon('top left')
@@ -30,6 +38,9 @@ function App() {
     case '/About':
 
       useEffect(() => {
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('headerTag').style.color = 'white'
+        SetCurrentLocation(location.pathname.replace('/', ''))
         setbgimage("url('../src/assets/teamImg-1.jpg')")
         setBgheight('350px')
         setbgPositon('bottom center')
@@ -42,6 +53,9 @@ function App() {
 
     case '/Contact':
       useEffect(() => {
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('headerTag').style.color = 'white'
+        SetCurrentLocation(location.pathname.replace('/', ''))
         setbgimage("url('../src/assets/contact-us.jpg')")
         setBgheight('350px')
         setbgPositon('center')
@@ -53,6 +67,9 @@ function App() {
 
     case '/purchase':
       useEffect(() => {
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('headerTag').style.color = 'white'
+        SetCurrentLocation(location.pathname.replace('/', ''))
         setbgimage("url('../src/assets/purchase-img.jpg')")
         setBgheight('350px')
         setbgPositon('bottom center')
@@ -65,6 +82,9 @@ function App() {
 
     case '/profile':
       useEffect(() => {
+        SetCurrentLocation(location.pathname.replace('/', ''))
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('headerTag').style.color = 'white'
         setbgimage("url('')")
         setBgheight('350px')
         setbgPositon('bottom center')
@@ -72,23 +92,108 @@ function App() {
 
 
       break;
+
+    case '/Home/1':
+      useEffect(() => {
+        document.getElementById('headerTag').style.color = 'white'
+        SetCurrentLocation(location.pathname.replace('/', ''))
+        setbgimage("url('')")
+        setBgheight('300px')
+        setbgPositon('bottom center')
+      }, [location.pathname])
+      break;
+
+    case '/Home/2':
+      useEffect(() => {
+        document.getElementById('headerTag').style.color = 'white'
+        SetCurrentLocation(location.pathname.replace('/', ''))
+        setbgimage("url('')")
+        setBgheight('300px')
+        setbgPositon('bottom center')
+      }, [location.pathname])
+      break;
+
+    case '/Home/3':
+      useEffect(() => {
+        document.getElementById('headerTag').style.color = 'white'
+        SetCurrentLocation(location.pathname.replace('/', ''))
+        setbgimage("url('')")
+        setBgheight('300px')
+        setbgPositon('bottom center')
+      }, [location.pathname])
+      break;
+
+
+    case '/Home/4':
+      useEffect(() => {
+        document.getElementById('headerTag').style.color = 'white'
+        SetCurrentLocation(location.pathname.replace('/', ''))
+        setbgimage("url('')")
+        setBgheight('300px')
+        setbgPositon('bottom center')
+      }, [location.pathname])
+      break;
+
+    case '/Home/5':
+      useEffect(() => {
+        document.getElementById('headerTag').style.color = 'white'
+        SetCurrentLocation(location.pathname.replace('/', ''))
+        setbgimage("url('')")
+        setBgheight('300px')
+        setbgPositon('bottom center')
+      }, [location.pathname])
+      break;
+    case '/Home/6':
+      useEffect(() => {
+        document.getElementById('headerTag').style.color = 'white'
+        SetCurrentLocation(location.pathname.replace('/', ''))
+        setbgimage("url('')")
+        setBgheight('300px')
+        setbgPositon('bottom center')
+      }, [location.pathname])
+      break;
+
+    case '/Login':
+      useEffect(() => {
+        SetCurrentLocation(location.pathname.replace('/', ''))
+        document.getElementById('overlay').style.display = 'none';
+        document.getElementById('headerTag').style.color = 'inherit'
+
+        setbgimage("url('')")
+        setBgheight('50px')
+        setbgPositon('bottom center')
+      }, [location.pathname])
+      break;
+
+    case '/Register':
+      useEffect(() => {
+        SetCurrentLocation(location.pathname.replace('/', ''))
+        document.getElementById('overlay').style.display = 'none';
+        document.getElementById('headerTag').style.color = 'inherit'
+
+        setbgimage("url('')")
+        setBgheight('50px')
+        setbgPositon('bottom center')
+      }, [location.pathname])
+      break;
+
+
   }
+
+
 
 
   return (
     <>
 
-      <header className='text-[#FFF] bg-cover bg-no-repeat' id='headerTag' style={{
+      <header className='text-[#FFF] bg-cover bg-no-repeat ' id='headerTag' style={{
         backgroundColor: 'inherit',
         background: bgimage,
         backgroundPosition: bgPosition,
-        backgroundRepeat: 'no-repeat',
         minHeight: bgHeight,
       }} >
         <div className='overlay' id='overlay' style={{ minHeight: bgHeight }}></div>
-        <Navbar />
-        <br />
-        <br />
+        <Navbar CurrentLocation={CurrentLocation} />
         <br />
         {
           location?.pathname == '/' ?
@@ -106,14 +211,43 @@ function App() {
 
               </div>
             </div> : <div className='flex items-center justify-center relative z-10 '>
-              <h1 className='text-3xl font-bold'>{location.pathname.replace('/', '')}</h1>
+              <h1 className='text-3xl font-bold'>{
+
+                CurrentLocation == 'Login' || CurrentLocation == 'Register' ? '' :
+
+                  /^Home\/([1-6]|1[0-2])$/.test(location.pathname.replace('/', '')) ? 'Event Details' : location.pathname.replace('/', '')
+
+
+              }</h1>
             </div>
         }
       </header>
-      <br />
-      <br />
+      {
+        CurrentLocation == 'Login' || CurrentLocation == 'Register' ? "" :
+          <div >
+            <br />
+            <br />
+          </div>}
       <main>
-        <Outlet />
+        {
+          Navigation.state == 'idle' ? <Outlet /> :
+            <div className='flex items-center justify-center w-full h-[60vh]'>
+              <Oval
+                height={80}
+                width={80}
+                color="black"
+                wrapperStyle={{}}
+                wrapperClass=""
+                visible={true}
+                ariaLabel='oval-loading'
+                secondaryColor="#adadad"
+                strokeWidth={5}
+                strokeWidthSecondary={4}
+
+              />
+            </div>
+        }
+
       </main>
       <footer>
         <Footer />
