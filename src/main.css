@@ -12,18 +12,12 @@ body {
   box-sizing: border-box;
 }
 
-header {
-  background-color: inherit;
-  background-image: url("../src/assets/header-img-1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   background-color:#00000080;
   z-index: 1;
 }
@@ -82,4 +76,12 @@ header {
 }
 .work:hover .OnHoverOverly{
   opacity: 1;
+}
+
+#memorableSection{
+  background-color: inherit;
+  background-image: url('./assets/footer-top-img.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
