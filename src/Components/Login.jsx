@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../ContextHooks/Provider';
 
 function Login() {
-  const { Login } = useContext(AuthContext);
+  const { Login ,  googleLogin } = useContext(AuthContext);
   const [Show, setShow] = useState(false)
   const [Passworderror, setPasswordError] = useState(null);
 
@@ -12,6 +12,15 @@ function Login() {
   const Navigate = useNavigate();
 
   const LoginWithGoogle =() =>{
+    googleLogin()
+    .then(response =>{
+      console.log(response)
+      Navigate(location?.state ? location.state : '/')
+
+    })
+    .catch(error =>{
+      console.log(error)
+    })
 
     console.log('yess click the func ')
 

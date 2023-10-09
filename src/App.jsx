@@ -216,9 +216,9 @@ function App() {
           location?.pathname == '/' ?
             <div className='relative z-10 px-[5%]'>
 
-              <div className='w-[50%] space-y-6 float-right'>
-                <h1 className='text-5xl font-bold '>
-                  Bangladesh Best Event <br />
+              <div className='md:w-[50%] space-y-6 float-right'>
+                <h1 className='md:text-5xl  text-3xl font-bold md:text-start text-center'>
+                  Bangladesh Best Event <br className='md:block hidden' />
                   Management Agency !
                 </h1>
 

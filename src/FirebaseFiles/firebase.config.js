@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from 'firebase/auth'
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDpR5PgwHmlwl26t0dldV6vjKm0yF8QnIs",
-    authDomain: "cruto-event-manager.firebaseapp.com",
-    projectId: "cruto-event-manager",
-    storageBucket: "cruto-event-manager.appspot.com",
-    messagingSenderId: "537040719480",
-    appId: "1:537040719480:web:ce8f4f2d2be3a8e47a278d"
+    apiKey: import.meta.env.VITE_APIKEY,
+    authDomain: import.meta.env.VITE_DOMAIN ,
+    projectId: import.meta.env.VITE_PROJECTID,
+    storageBucket: import.meta.env.VITE_STORAGE ,
+    messagingSenderId: import.meta.env.VITE_MESSAGEID,
+    appId: import.meta.env.VITE_APPID
 };
 
 

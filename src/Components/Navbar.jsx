@@ -1,10 +1,12 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { NavLink, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { AuthContext } from '../ContextHooks/Provider';
 
 
 function Navbar({ CurrentLocation }) {
+
+  const [menu , setMenu ] = useState(false)
 
   const { user, Logout } = useContext(AuthContext)
 
@@ -20,7 +22,11 @@ function Navbar({ CurrentLocation }) {
       })
 
   }
-  console.log(CurrentLocation)
+
+  const ToggleNav =()=>{
+    setMenu(!menu)
+
+  }
 
   return (
     <>
@@ -28,7 +34,12 @@ function Navbar({ CurrentLocation }) {
         <div>
           <h1 className='pb-4 font-semibold text-3xl'>Cruto</h1>
         </div>
-        <div>
+        <div className='md:hidden block text-2xl text-white'>
+          <button onClick={ToggleNav}>{menu ?  <i className="fa-solid fa-xmark"></i>   :  <i className="fa-solid fa-bars"></i>}</button>
+
+        </div>
+        {/* ---navlinks-- */}
+        <div className='md:block hidden'>
           <ul className='flex items-center gap-3 ' id='NavLink'>
             <li><NavLink to='/' >Home</NavLink></li>
             <li><NavLink to='/About' >About us</NavLink></li>
@@ -42,7 +53,7 @@ function Navbar({ CurrentLocation }) {
             }
           </ul>
         </div>
-        <div>
+        <div className='md:block hidden'>
 
           {
             user ? <div className='inline-flex gap-3 items-center'>

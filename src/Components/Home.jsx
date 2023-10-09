@@ -19,8 +19,8 @@ function Home() {
 
 
   return (
-    <>
-      <section className='px-[5%]'>
+    <div className='md:block hidden'>
+      <section className='px-[5%] '>
         {/* --who-we-are-section-- */}
         <div className='flex gap-5'>
           <div className='w-[50%]'>
@@ -268,7 +268,7 @@ function Home() {
 
 
 
-    </>
+    </div>
   )
 }
 
