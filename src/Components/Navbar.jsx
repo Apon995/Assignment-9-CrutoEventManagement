@@ -58,7 +58,7 @@ function Navbar({ CurrentLocation }) {
 
         </div>
         {/* ---navlinks-- */}
-        <div style={{color : `${ CurrentLocation == '' || CurrentLocation == 'About' || CurrentLocation == 'Contact' || CurrentLocation =='purchase' || CurrentLocation == 'profile' || CurrentLocation == 'Login' || CurrentLocation == 'Register' ? 'black' : 'white'}`}} id='navbar' className='absolute md:static top-[-285px] left-0 duration-700 bg-white shadow-xl rounded-md md:w-fit w-full h-[255px] md:h-0 py-2 md:py-0 z-10'>
+        <div style={{color : `${ CurrentLocation == '' || CurrentLocation == 'About' || CurrentLocation == 'Contact' || CurrentLocation =='purchase' || CurrentLocation == 'profile' || CurrentLocation == 'Login' || CurrentLocation == 'Register' ? 'black' : 'white'}`}} id='navbar' className='absolute md:static top-[-285px] left-0 duration-700 bg-white font-semibold shadow-xl rounded-md md:w-fit w-full h-[255px] md:h-0 py-2 md:py-0 z-10'>
           <ul className='flex items-center gap-3 md:flex-row flex-col z-10 md:z-0 ' id='NavLink'>
             <li><NavLink to='/' >Home</NavLink></li>
             <li><NavLink to='/About' >About us</NavLink></li>
